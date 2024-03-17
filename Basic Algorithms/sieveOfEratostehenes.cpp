@@ -39,3 +39,9 @@ int main()
          << "The total prime numbers in range 1 to " << n << " Inclusively is : " << ct;
     return 0;
 }
+
+//  Internal IP : 10.142.0.2
+//  External IP : 335.237.172.196
+//  Password : EBGKYde1Gmmv
+//  ID :blog-db
+//  35.237.79.235
