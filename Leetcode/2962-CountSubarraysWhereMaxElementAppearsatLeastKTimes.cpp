@@ -29,6 +29,30 @@ long long countSubarrays(vector<int> &nums, int k)
 }
 // --------------------------------------------- Approach 2 --------------------------------------------//
 
+long long countSubarrays2(vector<int> &nums, int k)
+{
+    int mx = 0;
+    for (auto i : nums)
+        mx = max(mx, i);
+    int n = nums.size();
+    long long int ans = 0LL;
+    int i = 0, j = 0;
+    unordered_map<int, int> m;
+    while (i < n)
+    {
+        if (nums[i] == mx)
+            m[nums[i]]++;
+        while (m[mx] >= k)
+        {
+            ans += n - i;
+            if (nums[j] == mx)
+                m[nums[j]]--;
+            j++;
+        }
+        i++;
+    }
+    return ans;
+}
 int main()
 {
     /*
